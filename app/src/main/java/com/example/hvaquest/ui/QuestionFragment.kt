@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
@@ -39,7 +38,7 @@ class QuestionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Get question object
-        question = viewModel.getQuest()
+        question = viewModel.getQuestion()
 
         // Get question
         tvQuestion.text = question.question

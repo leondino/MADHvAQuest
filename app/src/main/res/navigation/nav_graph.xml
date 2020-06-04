@@ -28,15 +28,19 @@
         android:label="Location Clue"
         tools:layout="@layout/fragment_clue">
         <action
-            android:id="@+id/action_clueFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
-        <action
             android:id="@+id/action_clueFragment_to_finishFragment"
             app:destination="@id/finishFragment" />
+        <action
+            android:id="@+id/action_clueFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
     </fragment>
     <fragment
         android:id="@+id/finishFragment"
         android:name="com.example.hvaquest.ui.FinishFragment"
         android:label="Quest Completed"
-        tools:layout="@layout/fragment_finish" />
+        tools:layout="@layout/fragment_finish" >
+        <action
+            android:id="@+id/action_finishFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
