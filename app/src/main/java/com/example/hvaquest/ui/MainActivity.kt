@@ -1,17 +1,15 @@
 package com.example.hvaquest.ui
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.hvaquest.R
-
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +40,15 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        // Backtracks the right questions when using the back button
+        toolbar.setNavigationOnClickListener {
+            if(navController.currentDestination!!.id == R.id.questionFragment
+                && viewModel.quizNumber != 1){
+            viewModel.quizNumber--
+            }
+            navController.navigateUp()
+        }
     }
 
 }
