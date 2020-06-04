@@ -10,9 +10,13 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome">Welcome to the HvA Locations Quest</string>
     <string name="explanation">After pressing start you will start the quest. After each question a picture of a HvA building is shown. Got to the building and start the next question. At the end there will be a prize waiting for you!</string>
     <string name="start_button">Start Quest</string>
+    <string name="congratulations">Congratulations, you finished the quest!\nHere is your prize</string>
+    <string name="finish_button">Finish</string>
+    <string name="next_button">Next Question</string>
+    <string name="clue">Go to the location as shown in the image below.</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="question_number">%d/10</string>
 </resources>
